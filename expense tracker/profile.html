@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="globalSettings.js" defer></script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="form-container" id="update-profile">
+            <h2><i class="fas fa-user"></i> Update Profile</h2>
+            <form id="profileForm" onsubmit="return updateProfile(event)">
+                <div class="input-group">
+                    <label for="profile-picture"><i class="fas fa-camera"></i> Profile Picture</label>
+                    <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="previewImage(event)">
+                    <img id="profile-preview" class="profile-preview" src="" alt="" />
+                </div>
+                <div class="input-group">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required oninput="validateUsername()">
+                    <span id="username-feedback" class="feedback"></span>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required oninput="validateEmail()">
+                    <span id="email-feedback" class="feedback"></span>
+                </div>
+                <div class="input-group">
+                    <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address">
+                </div>
+                <div class="input-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn">Update Profile</button>
+                    <button type="button" class="btn cancel-btn" onclick="cancelUpdate()">Cancel</button>
+                </div>
+                <div class="loader" id="profile-loader" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="profile-success-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('profile-success-popup')">&times;</span>
+            <p>Profile updated successfully!</p>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

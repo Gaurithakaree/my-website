@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Calendar</title>
+    <link rel="stylesheet" href="calender.css">
+</head>
+<body>
+    <div class="container">
+        <main class="calendar-content">
+            <header>
+                <h1>Transactions Calendar</h1>
+            </header>
+
+            <section class="calendar">
+                <div class="calendar-controls">
+                    <button id="prevMonth">Previous Month</button>
+                    <h2 id="monthYear"></h2>
+                    <button id="nextMonth">Next Month</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody">
+                        <!-- Days of the month will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <div class="expense-form">
+            <h3>Add Expense</h3>
+            <input type="date" id="expenseDate" required>
+            <input type="number" id="expenseAmount" placeholder="Amount (in BDT)" required>
+            <button id="addExpense">Add Expense</button>
+        </div>
+    </div>
+
+    <script src="calender.js"></script>
+</body>
+</html>

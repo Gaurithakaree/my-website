@@ -1,0 +1,140 @@
+/* Style for the body and page layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e7ef; /* Light gray-blue background */
+}
+
+/* Container for the entire dashboard */
+.container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed; /* Fix the sidebar in place */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    background-color: #343a40; /* Dark background for sidebar */
+    color: #ffffff; /* White text color */
+    width: 250px; /* Fixed width for sidebar */
+    height: 100%; /* Full height of the viewport */
+    padding: 20px; /* Padding inside sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+/* Sidebar heading */
+.sidebar h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px; /* Font size for heading */
+}
+
+/* Sidebar links */
+.sidebar ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Spacing between items */
+}
+
+.sidebar a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.sidebar a:hover {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1; /* Take remaining space */
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 40px; /* Padding around content */
+    text-align: center; /* Centered text */
+    background-color: #f8f9fa; /* Light background */
+    height: 100vh; /* Ensure full height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+/* Title styles */
+.main-content h1 {
+    font-size: 32px; /* Larger font for title */
+    color: #3b3b3b; /* Dark gray text */
+}
+
+/* Module container styles */
+.module-container {
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Padding inside module */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Padding around footer */
+    position: relative; /* Allow footer to sit at the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer-container {
+    display: flex; /* Use flexbox for footer layout */
+    justify-content: space-around; /* Space sections evenly */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.footer-section {
+    margin: 10px; /* Margin around sections */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+/* Footer links */
+.footer-section ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Spacing between items */
+}
+
+.footer-section a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-section a:hover {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and main content */
+    }
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+    }
+    .main-content {
+        margin-left: 0; /* No left margin */
+    }
+    .footer-container {
+        flex-direction: column; /* Stack footer sections */
+    }
+}

@@ -1,0 +1,224 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Container */
+.container {
+    background-color: var(--container-bg);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--header-color);
+    font-size: 1.8rem;
+}
+
+#theme-toggle-btn {
+    padding: 8px 12px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Input and Select sections */
+.input-section, .currency-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+}
+
+/* Swap Button */
+#swap-btn {
+    font-size: 22px;
+    background-color: #f39c12;
+    color: white;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#swap-btn:hover {
+    background-color: #d35400;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    width: 30%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* Result Styling */
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--text-color);
+    padding: 12px;
+    background-color: var(--result-bg);
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Tooltip for conversion rate */
+.result:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: #555;
+    color: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* History Section */
+.history {
+    margin-top: 30px;
+}
+
+.history h2 {
+    font-size: 18px;
+    color: var(--header-color);
+}
+
+#conversion-history {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#conversion-history li {
+    background-color: var(--history-item-bg);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--history-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #theme-toggle-btn {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+}
+
+/* Light/Dark Mode Variables */
+:root {
+    --bg-color: #f3f3f3;
+    --text-color: #333;
+    --header-color: #333;
+    --container-bg: #fff;
+    --button-bg: #007bff;
+    --button-text: white;
+    --button-hover: #0056b3;
+    --input-bg: #f0f0f0;
+    --placeholder-color: #888;
+    --result-bg: #f9f9f9;
+    --history-item-bg: #e0e0e0;
+    --history-text: #333;
+}
+
+.dark-mode {
+    --bg-color: #333;
+    --text-color: #f3f3f3;
+    --header-color: #fff;
+    --container-bg: #444;
+    --button-bg: #ffcc00;
+    --button-text: #333;
+    --button-hover: #ff9900;
+    --input-bg: #555;
+    --placeholder-color: #ccc;
+    --result-bg: #555;
+    --history-item-bg: #555;
+    --history-text: #f3f3f3;
+}

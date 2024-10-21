@@ -1,0 +1,56 @@
+/* Style for the body and page layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e7ef; /* Light gray-blue background */
+}
+
+/* Centering the content container */
+.container {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Styling the logo image */
+.logo-image {
+    max-width: 100px; /* Adjust size based on your logo */
+    margin-bottom: 20px;
+}
+
+/* Styling the title */
+.title h1 {
+    font-size: 24px;
+    color: #3b3b3b; /* Dark gray for the text */
+}
+
+/* Styling the navigation links */
+.navigation {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.link {
+    color: #6c63ff; /* Soft purple-blue for the links */
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #ff4b5c; /* Light red on hover */
+}
+
+/* Adding a separator between the links */
+.navigation a:not(:last-child)::after {
+    content: "";
+    margin: 0 5px;
+    color: #3b3b3b;
+}

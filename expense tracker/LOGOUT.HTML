@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Summary</title>
+    <link rel="stylesheet" href="LOGOUT.css">
+    <script src="LOGOUT.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker Summary</h1>
+        <button id="logoutButton">Logout</button>
+    </header>
+    <main>
+        <section class="summary">
+            <h2>Budget Summary</h2>
+            <div id="budgetData">
+                <p>Total Income: <span id="totalIncome">$0</span></p>
+                <p>Total Expenses: <span id="totalExpenses">$0</span></p>
+                <p>Remaining Budget: <span id="remainingBudget">$0</span></p>
+            </div>
+            <div id="summaryMessage" class="hidden"></div>
+        </section>
+        <section class="charts">
+            <h2>Your Charts</h2>
+            <div id="pieChart"></div>
+            <!-- Additional charts can be added here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Expense Tracker</p>
+    </footer>
+</body>
+</html>

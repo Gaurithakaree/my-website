@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Personal Expense Tracker</title>
+    <!-- Include Font Awesome for Eye Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="REGISTER.css">
+     <script src="globalSettings.js" defer></script>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" onsubmit="return validateRegisterForm()">
+            <div class="form-group">
+                <label for="registerName">Full Name</label>
+                <input type="text" id="registerName" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group password-container">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="password" placeholder="Create a password" required>
+                <i class="fas fa-eye" id="togglePassword" onclick="togglePasswordVisibility('registerPassword', 'togglePassword')"></i>
+            </div>
+            <div class="form-group password-container">
+                <label for="registerConfirmPassword">Confirm Password</label>
+                <input type="password" id="registerConfirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <i class="fas fa-eye" id="toggleConfirmPassword" onclick="togglePasswordVisibility('registerConfirmPassword', 'toggleConfirmPassword')"></i>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="LOGIN.HTML">Login here</a></p>
+    </div>
+    <script src="REGISTER.js"></script>
+</body>
+</html>

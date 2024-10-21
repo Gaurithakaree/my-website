@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Personal Expense Tracker</title>
+    <link rel="stylesheet" href="LOGIN.CSS">
+    <script src="globalSettings.js" defer></script>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLoginForm()" action="dash.html">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="REGISTER.html">Register here</a></p>
+    </div>
+    <script src="LOGIN.JS"></script>
+</body>
+</html>

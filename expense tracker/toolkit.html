@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Sidebar</title>
+    <link rel="stylesheet" href="toolkit.css">
+    <script src="globalSettings.js" defer></script>
+     
+</head>
+<body>
+    <div class="sidebar" id="tools-sidebar">
+        <button class="close-btn" onclick="closeSidebar()">✖</button>
+        <h2>Tools</h2>
+        <button class="tool-btn" onclick="showCalculator()">🧮 Calculator</button>
+        <button class="tool-btn" onclick="showNotepad()">📝 Notepad</button>
+        <button class="tool-btn" onclick="showUnitConverter()">📏 Unit Converter</button>
+        <button class="tool-btn" onclick="showTemperatureConverter()">🌡️ Temperature Converter</button>
+        <button class="tool-btn" onclick="showToDoList()">✅ To-Do List</button>
+        <button class="tool-btn" onclick="showTimer()">⏳ Timer</button>
+    </div>
+
+    <div id="main-content">
+        <button class="open-btn" onclick="openSidebar()">☰ Open Tools</button>
+        
+        <div class="tool-section" id="calculator">
+            <h3>Calculator</h3>
+            <input type="text" id="calc-display" disabled>
+            <div class="calc-buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">⌫</button>
+                <button onclick="appendOperator('/')">÷</button>
+                <button onclick="appendOperator('*')">×</button>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('-')">−</button>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('+')">+</button>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="equal-btn" onclick="calculateResult()">=</button>
+                <button class="zero-btn" onclick="appendNumber('0')">0</button>
+                <button onclick="appendFunction('sqrt')">√</button>
+                <button onclick="appendFunction('sqr')">x²</button>
+                <button onclick="appendFunction('exp')">e^x</button>
+                <button onclick="appendFunction('log')">log</button>
+                <button onclick="appendFunction('ln')">ln</button>
+                <button onclick="appendOperator('%')">%</button>
+            </div>
+        </div>
+
+        <div class="tool-section" id="notepad">
+            <h3>Notepad</h3>
+            <textarea id="notepad-content" placeholder="Type your notes here..."></textarea>
+            <button onclick="saveNotes()">Save Note</button>
+            <div id="saved-notes"></div>
+        </div>
+
+        <div class="tool-section" id="unit-converter">
+            <h3>Unit Converter</h3>
+            <input type="number" id="length-input" placeholder="Enter length">
+            <select id="length-unit">
+                <option value="meters">Meters</option>
+                <option value="kilometers">Kilometers</option>
+                <option value="miles">Miles</option>
+                <option value="feet">Feet</option>
+            </select>
+            <button onclick="convertLength()">Convert</button>
+            <div id="length-output"></div>
+            <hr>
+            <input type="number" id="weight-input" placeholder="Enter weight">
+            <select id="weight-unit">
+                <option value="kilograms">Kilograms</option>
+                <option value="grams">Grams</option>
+                <option value="pounds">Pounds</option>
+                <option value="ounces">Ounces</option>
+            </select>
+            <button onclick="convertWeight()">Convert</button>
+            <div id="weight-output"></div>
+        </div>
+
+        <div class="tool-section" id="temperature-converter">
+            <h3>Temperature Converter</h3>
+            <input type="number" id="temp-input" placeholder="Enter temperature">
+            <select id="temp-unit">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+            <div id="temp-output"></div>
+        </div>
+
+        <div class="tool-section" id="todo-list">
+            <h3>To-Do List</h3>
+            <input type="text" id="todo-input" placeholder="Enter a task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+
+        <div class="tool-section" id="timer">
+            <h3>Timer</h3>
+            <input type="number" id="timer-input" placeholder="Minutes" min="1">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <div id="timer-output"></div>
+        </div>
+    </div>
+
+    <script src="toolkit.js"></script>
+</body>
+</html>

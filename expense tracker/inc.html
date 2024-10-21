@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker - Sources of Income</title>
+    <link rel="stylesheet" href="icome.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for data visualization -->
+    <script src="globalSettings.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+        <h2>Sources of Income</h2>
+
+        <form id="income-form">
+            <div class="income-group">
+                <label for="earned-income">Earned Income (Salary, Job):</label>
+                <input type="number" id="earned-income" placeholder="Enter amount" required>
+                <select id="earned-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            
+            <div class="income-group">
+                <label for="business-income">Business Income (Freelancing, Businesses):</label>
+                <input type="number" id="business-income" placeholder="Enter amount" required>
+                <select id="business-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            
+            <div class="income-group">
+                <label for="investment-income">Investment Income (Stocks, Mutual Funds):</label>
+                <input type="number" id="investment-income" placeholder="Enter amount" required>
+                <select id="investment-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            
+            <div class="income-group">
+                <label for="rental-income">Rental Income (Property, Estate):</label>
+                <input type="number" id="rental-income" placeholder="Enter amount" required>
+                <select id="rental-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+
+            <!-- New income fields -->
+            <div class="income-group">
+                <label for="royalty-income">Royalty Income (Books, Music):</label>
+                <input type="number" id="royalty-income" placeholder="Enter amount">
+                <select id="royalty-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+
+            <div class="income-group">
+                <label for="interest-income">Interest Income (Savings, Bonds):</label>
+                <input type="number" id="interest-income" placeholder="Enter amount">
+                <select id="interest-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+
+            <!-- Button to calculate total income -->
+            <button type="button" class="calculate-btn" onclick="calculateIncome()">Calculate</button>
+            <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+        </form>
+
+        <div id="result" class="summary">
+            <h3>Income Summary</h3>
+            <p>Weekly Total: <span id="weekly-total">0</span></p>
+            <p>Monthly Total: <span id="monthly-total">0</span></p>
+            <p>Yearly Total: <span id="yearly-total">0</span></p>
+        </div>
+
+        <!-- Link to the Expense Tracker page -->
+        <a href="exp.html">Go to Expense Tracker</a>
+    </div>
+
+    <script src="icome.js"></script>
+</body>
+</html>

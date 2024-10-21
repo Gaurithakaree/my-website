@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4ff; /* Light mode background */
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #f0f4ff; /* Light text color for dark mode */
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.container.dark-mode {
+    background: #1e1e1e; /* Dark mode container background */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #007BFF;
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#dark-mode-toggle {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+
+.tracker-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.income-section, .expense-section, .budget-section {
+    flex: 1 1 100%; /* Updated to take full width */
+    background-color: #e9f0ff; /* Light mode background */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #007BFF;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.income-section.dark-mode, .expense-section.dark-mode, .budget-section.dark-mode {
+    background-color: #292929; /* Dark mode background */
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #007BFF;
+}
+
+h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #0056b3;
+}
+
+.input-group {
+    margin-bottom: 25px; /* Increased space between input groups */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 7px; /* Softer rounded corners */
+    margin-bottom: 10px; /* Add space below inputs */
+}
+
+input.dark-mode {
+    background-color: #424242;
+    color: white;
+    border: 1px solid #555;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px; /* Larger buttons */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* Increased space between buttons */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased space between buttons */
+}
+
+.quick-expense-btn {
+    flex: 1;
+}
+
+#summary {
+    margin-top: 20px;
+}
+
+#summary p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#summary span {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#expense-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px; /* More space above expense list */
+}
+
+#expense-list li {
+    background-color: #e0f7fa;
+    padding: 15px; /* Larger expense list items */
+    margin-bottom: 10px; /* More space between expense items */
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#expense-list li.dark-mode {
+    background-color: #383838;
+}
+
+canvas {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .income-section, .expense-section, .budget-section {
+        flex: 1 1 100%; /* Ensure full width on mobile */
+    }
+}

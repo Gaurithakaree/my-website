@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Module</title>
+    <link rel="stylesheet" href="settings.css">
+    <script src="globalSettings.js" defer></script>
+</head>
+<body>
+    <div class="settings-container">
+        <h2>Settings</h2>
+
+        <!-- Theme and Appearance -->
+        <div class="setting-section">
+            <h3>Theme and Appearance</h3>
+            <label for="theme-select">Select Theme:</label>
+            <select id="theme-select" onchange="changeTheme()">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="custom">Custom</option>
+            </select>
+
+            <label for="font-size">Font Size:</label>
+            <input type="range" id="font-size" min="12" max="24" value="16" oninput="changeFontSize(this.value)">
+            <span id="font-size-label">16px</span>
+
+            <label for="high-contrast">High Contrast Mode:</label>
+            <input type="checkbox" id="high-contrast" onchange="toggleHighContrast()">
+        </div>
+
+        <!-- Data Management -->
+        <div class="setting-section">
+            <h3>Data Management</h3>
+            <button onclick="backupData()">Backup Data</button>
+            <button onclick="restoreData()">Restore Data</button>
+            <button onclick="exportData()">Export Data as CSV</button>
+            <button onclick="clearHistory()">Clear History</button>
+        </div>
+
+        <!-- Privacy and Security -->
+        <div class="setting-section">
+            <h3>Privacy and Security</h3>
+            <label for="data-sharing">Data Sharing Permissions:</label>
+            <select id="data-sharing" onchange="changeDataSharing()">
+                <option value="none">None</option>
+                <option value="limited">Limited</option>
+                <option value="full">Full</option>
+            </select>
+
+            <label for="secure-access">Secure Access:</label>
+            <select id="secure-access" onchange="changeSecureAccess()">
+                <option value="none">None</option>
+                <option value="fingerprint">Fingerprint</option>
+                <option value="facial-recognition">Facial Recognition</option>
+            </select>
+
+            <label for="data-encryption">Data Encryption:</label>
+            <input type="checkbox" id="data-encryption" onchange="toggleEncryption()">
+        </div>
+
+        <!-- Language Preferences -->
+        <div class="setting-section">
+            <h3>Language Preferences</h3>
+            <label for="language-select">Select Language:</label>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

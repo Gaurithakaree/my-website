@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="exp1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <p>Manage your income, expenses, and savings with ease</p>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </header>
+
+        <div class="tracker-section">
+            <div class="income-section">
+                <h2>Income</h2>
+                <div class="input-group">
+                    <label for="salary">Salary:</label>
+                    <input type="number" id="salary" placeholder="Enter salary">
+                </div>
+            </div>
+
+            <div class="expense-section">
+                <h2>Expenses</h2>
+                <div class="input-group">
+                    <label for="expense-name">Expense Name:</label>
+                    <input type="text" id="expense-name" placeholder="Enter expense name">
+                </div>
+
+                <div class="input-group">
+                    <label for="expense-amount">Amount:</label>
+                    <input type="number" id="expense-amount" placeholder="Enter expense amount">
+                </div>
+
+                <div class="input-group">
+                    <label for="expense-date">Date:</label>
+                    <input type="date" id="expense-date">
+                </div>
+
+                <div class="button-group">
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Groceries', 0)">Groceries</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Rent', 0)">Rent</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Utilities', 0)">Utilities</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Transportation', 0)">Transportation</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Health', 0)">Health</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Entertainment', 0)">Entertainment</button>
+                    <button class="quick-expense-btn" onclick="addQuickExpense('Miscellaneous', 0)">Miscellaneous</button>
+                </div>
+
+                <button id="add-expense-btn">Add Expense</button>
+
+                <h3>Expense List</h3>
+                <ul id="expense-list"></ul>
+            </div>
+
+            <div class="budget-section">
+                <h2>Budget Summary</h2>
+                <button id="calculate-btn">Calculate</button>
+                <div id="summary">
+                    <p>Total Income: <span id="total-income">$0</span></p>
+                    <p>Total Expenses: <span id="total-expenses">$0</span></p>
+                    <p>Savings (10%): <span id="savings">$0</span></p>
+                    <p>Remaining Balance: <span id="balance">$0</span></p>
+                </div>
+                <canvas id="expenseChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="exp1.js"></script>
+</body>
+</html>

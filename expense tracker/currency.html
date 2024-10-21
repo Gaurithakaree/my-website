@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Currency Converter</title>
+    <link rel="stylesheet" href="currency.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Currency Converter</h1>
+            <button id="theme-toggle-btn">🌞 Dark Mode</button>
+        </div>
+
+        <div class="converter-box">
+            <div class="input-section">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+            </div>
+
+            <div class="currency-section">
+                <label for="from-currency">From</label>
+                <select id="from-currency">
+                    <option value="USD">$ USD - US Dollar</option>
+                    <option value="EUR">€ EUR - Euro</option>
+                    <option value="GBP">£ GBP - British Pound</option>
+                    <option value="INR">₹ INR - Indian Rupee</option>
+                    <option value="JPY">¥ JPY - Japanese Yen</option>
+                    <option value="AUD">A$ AUD - Australian Dollar</option>
+                    <option value="CAD">C$ CAD - Canadian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                </select>
+
+                <button id="swap-btn" title="Swap Currencies">⇆</button>
+
+                <label for="to-currency">To</label>
+                <select id="to-currency">
+                    <option value="EUR">€ EUR - Euro</option>
+                    <option value="USD">$ USD - US Dollar</option>
+                    <option value="GBP">£ GBP - British Pound</option>
+                    <option value="INR">₹ INR - Indian Rupee</option>
+                    <option value="JPY">¥ JPY - Japanese Yen</option>
+                    <option value="AUD">A$ AUD - Australian Dollar</option>
+                    <option value="CAD">C$ CAD - Canadian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                </select>
+            </div>
+
+            <div class="action-buttons">
+                <button id="calculate-btn">Calculate</button>
+                <button id="clear-btn">Clear</button>
+                <button id="copy-btn">Copy to Clipboard</button>
+            </div>
+
+            <div class="result">
+                <p id="conversion-result" title="Hover for rate"></p>
+            </div>
+
+            <div class="history">
+                <h2>Conversion History</h2>
+                <ul id="conversion-history"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="currency.js"></script>
+</body>
+</html>
